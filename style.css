@@ -1,0 +1,126 @@
+:root {
+    --primary: #0a1f44;
+    --accent: #1abc9c;
+    --light: #ecf0f1;
+    --danger: #e74c3c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--primary);
+    color: var(--light);
+}
+
+header {
+    background: #06162e;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--accent);
+    margin: 0;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    padding: 2em;
+    animation: fadeIn 0.5s ease;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input, select {
+    background: #112a56;
+    color: var(--light);
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #16a085;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #2c3e50;
+}
+
+th {
+    color: var(--accent);
+}
+
+.action-btn {
+    background: var(--danger);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: #c0392b;
+}
+
+#search {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #06162e;
+    margin-top: 2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
